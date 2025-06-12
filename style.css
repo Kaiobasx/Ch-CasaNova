@@ -1,0 +1,437 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Rolagem suave para as seções */
+}
+
+/* Header e Navegação */
+header {
+    background-color: #333333; /* Roxo escuro */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky; /* Menu fixo no topo */
+    top: 0;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo a {
+    color: white;
+    font-size: 0.2em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo img{
+
+    width: 50px; /* Define a largura da imagem para 50 pixels */
+    height: 50px; /* Define a altura da imagem para 50 pixels */
+    object-fit: contain; /* Garante que a imagem inteira seja visível sem distorcer, mantendo suas proporções */
+
+}
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+}
+
+.nav-links a:hover {
+    color: #5a2a7a; /* Amarelo dourado para hover */
+}
+
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("./img/IMG_2347_VSCO.jpg") no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 10px;
+    height: 80vh; /* Altura da tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+}
+
+.btn-cta {
+    background-color: #979797;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: #333333;
+}
+
+/* Seções de Conteúdo Genéricas */
+.section-content {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.08);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.section-content h2 {
+    color: #5a2a7a;
+    font-size: 2.8em;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-content h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 80px;
+    height: 4px;
+    background-color: #333333;
+    border-radius: 2px;
+}
+
+
+/* Sobre Nós */
+.about-container {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.about-container p {
+    margin-bottom: 15px;
+}
+
+/* Grid de Presentes (Mantido e ajustado) */
+.gift-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.gift-item {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gift-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.gift-item img {
+    width: 100%;
+    height: 250px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    display: block;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+.gift-item h3 {
+    color: #333333;
+    margin: 10px 0;
+    font-size: 1.6em;
+    padding: 0 15px;
+}
+
+.gift-item p {
+    color: #666;
+    font-size: 1em;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+.buy-button {
+    display: block;
+    width: calc(100% - 40px); /* Largura total menos padding */
+    padding: 12px 15px;
+    margin: 8px auto; /* Centraliza e adiciona margem entre botões */
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.buy-button:active {
+    transform: translateY(1px); /* Pequeno efeito de clique */
+}
+
+/* Cores específicas para botões de loja (MANTIDAS) */
+.buy-button.amazon { background-color: #FF9900; }
+.buy-button.amazon:hover { background-color: #E68A00; }
+.buy-button.shopee { background-color: #EE4D2D; }
+.buy-button.shopee:hover { background-color: #D6452B; }
+.buy-button.magalu { background-color: #007bff; }
+.buy-button.magalu:hover { background-color: #0056b3; }
+.buy-button.americanas { background-color: #e5001a; }
+.buy-button.americanas:hover { background-color: #cc0017; }
+.buy-button.buscape { background-color: #007cbe; }
+.buy-button.buscape:hover { background-color: #006da9; }
+
+
+/* PIX Section */
+.pix-info {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.15em;
+    line-height: 1.8;
+}
+
+.pix-info p {
+    margin-bottom: 15px;
+}
+
+.pix-key {
+    background-color: #e0f7fa; /* Azul claro */
+    padding: 15px;
+    border-left: 5px solid #26c6da; /* Azul mais escuro */
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #00796b; /* Verde-azulado */
+}
+
+.qrcode-pix {
+    max-width: 200px;
+    height: auto;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Formulários de Autenticação (Login e Cadastro) */
+.auth-form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fcfcfc;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.auth-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #444;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #4a1f6a;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #5a2a7a; /* Roxo principal */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn-submit:hover {
+    background-color: #4a1f6a; /* Roxo mais escuro no hover */
+}
+
+.form-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.95em;
+}
+
+.form-link a {
+    color: #4a1f6a  ;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #333;
+    color: white;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .nav-links li {
+        margin: 5px 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.1em;
+    }
+
+    .section-content h2 {
+        font-size: 2.2em;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .logo a {
+        font-size: 1.5em;
+    }
+
+    .nav-links a {
+        font-size: 0.9em;
+    }
+
+    .hero {
+        padding: 80px 15px;
+        height: 50vh;
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .btn-cta {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    .section-content {
+        padding: 30px 15px;
+        margin: 20px auto;
+    }
+
+    .section-content h2 {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+
+    .about-container, .pix-info {
+        font-size: 1em;
+    }
+
+    .pix-key {
+        font-size: 1.1em;
+    }
+
+    .gift-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-form {
+        padding: 20px;
+    }
+}
