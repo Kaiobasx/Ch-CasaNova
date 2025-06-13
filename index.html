@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chá de Casa Nova - [Seu Nome]</title>
+    <title>Chá de Casa Nova - Kaioba e Yas</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,9 +12,10 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="index.html#home"><img
-                        src="https://static.vecteezy.com/system/resources/previews/016/416/772/original/home-icon-in-flat-design-style-house-button-illustration-png.png"
-                        alt="Chá de Casa Nova "></a>
+                <a href="index.html">
+                    <img src="https://static.vecteezy.com/system/resources/previews/016/416/772/original/home-icon-in-flat-design-style-house-button-illustration-png.png"
+                        alt="Logo Chá de Casa Nova - Ícone de Casa">
+                </a>
             </div>
             <ul class="nav-links">
                 <li><a href="#sobre">Sobre Nós</a></li>
@@ -28,10 +29,47 @@
 
     <main>
         <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Bem-vindos ao Nosso Chá de Casa Nova!</h1>
-                <p>Compartilhe conosco a alegria de um novo começo. Sua presença é o maior presente!</p>
-                <a href="Produtos.html" class="btn-cta">Ver Nossos Desejos</a>
+            <div class="carousel-container">
+                <div class="carousel-slide fade">
+                    <img src="./img/IMG_4662.JPG" alt="Foto de Casal Kaioba e Yas" class="img-1">
+                    <div class="hero-content">
+                        <h1>Bem-vindos ao Nosso Chá de Casa Nova!</h1>
+                        <p>Sua presença é o maior presente!</p>
+                        <a href="Produtos.html" class="btn-cta">Ver Nossos Desejos</a>
+                    </div>
+                </div>
+                <div class="carousel-slide fade">
+                    <img src="./img/IMG_4739.jpg" alt="Foto Nossa 2" class="img-2">
+                    <div class="hero-content">
+                        <h1>Um Novo Capítulo Começa...</h1>
+                        <p>Celebre conosco a alegria do nosso novo lar!</p>
+                        <a href="Produtos.html" class="btn-cta">Explore a Lista</a>
+                    </div>
+                </div>
+                <div class="carousel-slide fade">
+                    <img src="./img/IMG_2347_VSCO.jpg" alt="Foto Nossa 3" class="img-3">
+                    <div class="hero-content">
+                        <h1>Obrigado por Fazerem Parte!</h1>
+                        <p>Cada presente ajuda a construir nosso sonho.</p>
+                        <a href="Produtos.html" class="btn-cta">Nos Ajude!</a>
+                    </div>
+                </div>
+
+            </div>
+            <div style="text-align:center; position: absolute; bottom: 20px; width: 100%;">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </section>
+
+        <section id="countdown-section" class="section-content">
+            <h2>Faltam apenas para o Chá de Casa Nova!</h2>
+            <div id="countdown" class="countdown-timer">
+                <div><span id="days"></span><br>Dias</div>
+                <div><span id="hours"></span><br>Horas</div>
+                <div><span id="minutes"></span><br>Minutos</div>
+                <div><span id="seconds"></span><br>Segundos</div>
             </div>
         </section>
 
@@ -53,7 +91,7 @@
             <div class="pix-info">
                 <p>Se preferir nos ajudar com uma contribuição em dinheiro para os custos da casa nova, você pode fazer
                     um PIX diretamente para nossa conta!</p>
-                <p class="pix-key">
+                <p class="pix-key" id="pixKeyToCopy">
                     <strong>Chave PIX:</strong> 11 976277421
                 </p>
                 <p>
@@ -62,16 +100,17 @@
                 <p>
                     <strong>Instituição Financeira:</strong> Banco Santander
                 </p>
+                <button id="copyPixButton" class="btn-cta" style="margin-top: 20px;">Copiar Chave PIX</button>
                 <p>Agradecemos imensamente seu apoio!</p>
             </div>
         </section>
-
-
     </main>
 
     <footer>
         <p>&copy; 2025 Chá de Casa Nova de Kaioba e Yas. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

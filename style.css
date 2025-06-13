@@ -1,3 +1,4 @@
+
 /* Estilos Gerais */
 body {
     font-family: 'Arial', sans-serif;
@@ -34,13 +35,12 @@ header {
     text-decoration: none;
 }
 
-.logo img{
-
+.logo img {
     width: 50px; /* Define a largura da imagem para 50 pixels */
     height: 50px; /* Define a altura da imagem para 50 pixels */
     object-fit: contain; /* Garante que a imagem inteira seja visível sem distorcer, mantendo suas proporções */
-
 }
+
 .nav-links {
     list-style: none;
     margin: 0;
@@ -64,43 +64,164 @@ header {
     color: #5a2a7a; /* Amarelo dourado para hover */
 }
 
-
-/* Hero Section */
+/* --- Estilos para o Carrossel e Hero Section (REVISADO) --- */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("./img/IMG_2347_VSCO.jpg") no-repeat center center/cover;
+    background: none;
     color: white;
     text-align: center;
-    padding: 100px 10px;
-    height: 80vh; /* Altura da tela */
+    padding: 0;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.carousel-slide.active-slide {
+    display: block;
+    opacity: 1;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Permite o "zoom" e corte para preencher */
+    object-position: center; /* Padrão centralizado, será sobrescrito por classes específicas */
+    display: flex;
+}
+
+/* Classes específicas para ajuste de object-position por imagem */
+/* Verifique suas imagens e ajuste esses valores */
+.carousel-slide .img-1 {
+    object-position: 50% 50%; /* Exemplo: Foco central, bom para fotos onde o casal está no meio */
+}
+
+.carousel-slide .img-2 {
+    object-position: 50% 40%; /* Exemplo: Foco um pouco mais para cima */
+}
+
+.carousel-slide .img-3 {
+       object-position: 50% 52%; /* Exemplo: Foco um pouco mais para baixo */
+}
+
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    /* REMOVIDO: background-color: rgba(0, 0, 0, 0.5); */ /* Fundo semi-transparente removido */
+    box-sizing: border-box;
 }
 
 .hero-content h1 {
-    font-size: 3.5em;
+    font-size: 3.8em;
     margin-bottom: 15px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
 }
 
 .hero-content p {
-    font-size: 1.4em;
+    font-size: 1.5em;
     margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
 }
 
 .btn-cta {
     background-color: #979797;
     color: white;
-    padding: 15px 30px;
+    padding: 18px 35px;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    display: inline-block;
 }
 
 .btn-cta:hover {
     background-color: #333333;
+}
+
+/* Dots/indicadores */
+.hero > div:last-child {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+.dot {
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    margin: 0 4px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.active, .dot:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Animação de fade */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+
+/* Estilos para o Contador Regressivo */
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333333;
+}
+
+.countdown-timer div {
+    text-align: center;
+    line-height: 1.2;
+}
+
+.countdown-timer span {
+    display: block;
+    font-size: 1.5em;
+    color: #5a2a7a;
 }
 
 /* Seções de Conteúdo Genéricas */
@@ -133,7 +254,6 @@ header {
     background-color: #333333;
     border-radius: 2px;
 }
-
 
 /* Sobre Nós */
 .about-container {
@@ -175,11 +295,10 @@ header {
 
 .gift-item img {
     width: 100%;
-    height: 250px; /* Altura fixa para as imagens */
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    height: 250px;
+    object-fit: cover;
     display: block;
     margin-bottom: 15px;
-    object-fit: contain;
 }
 
 .gift-item h3 {
@@ -198,9 +317,9 @@ header {
 
 .buy-button {
     display: block;
-    width: calc(100% - 40px); /* Largura total menos padding */
+    width: calc(100% - 40px);
     padding: 12px 15px;
-    margin: 8px auto; /* Centraliza e adiciona margem entre botões */
+    margin: 8px auto;
     text-decoration: none;
     color: white;
     border-radius: 5px;
@@ -211,20 +330,15 @@ header {
 }
 
 .buy-button:active {
-    transform: translateY(1px); /* Pequeno efeito de clique */
+    transform: translateY(1px);
 }
 
-/* Cores específicas para botões de loja (MANTIDAS) */
+/* Cores específicas para botões de loja */
 .buy-button.amazon { background-color: #FF9900; }
 .buy-button.amazon:hover { background-color: #E68A00; }
 .buy-button.shopee { background-color: #EE4D2D; }
 .buy-button.shopee:hover { background-color: #D6452B; }
-.buy-button.magalu { background-color: #007bff; }
-.buy-button.magalu:hover { background-color: #0056b3; }
-.buy-button.americanas { background-color: #e5001a; }
-.buy-button.americanas:hover { background-color: #cc0017; }
-.buy-button.buscape { background-color: #007cbe; }
-.buy-button.buscape:hover { background-color: #006da9; }
+/* Notei que você tinha Magalu, Americanas e Buscapé comentados. Se precisar deles, adicione de volta. */
 
 
 /* PIX Section */
@@ -240,13 +354,13 @@ header {
 }
 
 .pix-key {
-    background-color: #e0f7fa; /* Azul claro */
+    background-color: #e0f7fa;
     padding: 15px;
-    border-left: 5px solid #26c6da; /* Azul mais escuro */
+    border-left: 5px solid #26c6da;
     border-radius: 5px;
     font-size: 1.2em;
     font-weight: bold;
-    color: #00796b; /* Verde-azulado */
+    color: #00796b;
 }
 
 .qrcode-pix {
@@ -306,7 +420,7 @@ header {
     display: block;
     width: 100%;
     padding: 15px;
-    background-color: #5a2a7a; /* Roxo principal */
+    background-color: #5a2a7a;
     color: white;
     border: none;
     border-radius: 5px;
@@ -318,7 +432,7 @@ header {
 }
 
 .btn-submit:hover {
-    background-color: #4a1f6a; /* Roxo mais escuro no hover */
+    background-color: #4a1f6a;
 }
 
 .form-link {
@@ -328,7 +442,7 @@ header {
 }
 
 .form-link a {
-    color: #4a1f6a  ;
+    color: #4a1f6a;
     text-decoration: none;
     font-weight: bold;
 }
@@ -336,7 +450,6 @@ header {
 .form-link a:hover {
     text-decoration: underline;
 }
-
 
 /* Footer */
 footer {
@@ -366,15 +479,25 @@ footer {
     }
 
     .hero-content h1 {
-        font-size: 2.5em;
+        font-size: 3em;
     }
 
     .hero-content p {
+        font-size: 1.3em;
+    }
+
+    .btn-cta {
+        padding: 15px 30px;
         font-size: 1.1em;
     }
 
     .section-content h2 {
         font-size: 2.2em;
+    }
+    .prev, .next {
+        font-size: 30px;
+        padding: 15px;
+        top: 30%; /* Ajuste para telas médias */
     }
 }
 
@@ -393,7 +516,7 @@ footer {
 
     .hero {
         padding: 80px 15px;
-        height: 50vh;
+        height: 60vh;
     }
 
     .hero-content h1 {
@@ -433,5 +556,17 @@ footer {
 
     .auth-form {
         padding: 20px;
+    }
+    .prev, .next {
+        font-size: 25px;
+        padding: 10px;
+        top: 25%; /* Ajuste para telas pequenas */
+    }
+    .dot {
+        height: 12px;
+        width: 12px;
+    }
+    .hero-content {
+        padding: 15px;
     }
 }
