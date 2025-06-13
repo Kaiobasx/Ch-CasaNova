@@ -1,4 +1,3 @@
-
 /* Estilos Gerais */
 body {
     font-family: 'Arial', sans-serif;
@@ -7,16 +6,20 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    scroll-behavior: smooth; /* Rolagem suave para as seções */
+    scroll-behavior: smooth;
+    /* Rolagem suave para as seções */
 }
 
 /* Header e Navegação */
 header {
-    background-color: #333333; /* Roxo escuro */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky; /* Menu fixo no topo */
+    background-color: #333333;
+    /* Roxo escuro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    /* Menu fixo no topo */
     top: 0;
-    z-index: 1000; /* Garante que fique acima de outros elementos */
+    z-index: 1000;
+    /* Garante que fique acima de outros elementos */
 }
 
 .navbar {
@@ -36,9 +39,12 @@ header {
 }
 
 .logo img {
-    width: 50px; /* Define a largura da imagem para 50 pixels */
-    height: 50px; /* Define a altura da imagem para 50 pixels */
-    object-fit: contain; /* Garante que a imagem inteira seja visível sem distorcer, mantendo suas proporções */
+    width: 50px;
+    /* Define a largura da imagem para 50 pixels */
+    height: 50px;
+    /* Define a altura da imagem para 50 pixels */
+    object-fit: contain;
+    /* Garante que a imagem inteira seja visível sem distorcer, mantendo suas proporções */
 }
 
 .nav-links {
@@ -61,7 +67,8 @@ header {
 }
 
 .nav-links a:hover {
-    color: #5a2a7a; /* Amarelo dourado para hover */
+    color: #5a2a7a;
+    /* Amarelo dourado para hover */
 }
 
 /* --- Estilos para o Carrossel e Hero Section (REVISADO) --- */
@@ -106,23 +113,28 @@ header {
 .carousel-slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Permite o "zoom" e corte para preencher */
-    object-position: center; /* Padrão centralizado, será sobrescrito por classes específicas */
+    object-fit: cover;
+    /* Permite o "zoom" e corte para preencher */
+    object-position: center;
+    /* Padrão centralizado, será sobrescrito por classes específicas */
     display: flex;
 }
 
 /* Classes específicas para ajuste de object-position por imagem */
 /* Verifique suas imagens e ajuste esses valores */
 .carousel-slide .img-1 {
-    object-position: 50% 50%; /* Exemplo: Foco central, bom para fotos onde o casal está no meio */
+    object-position: 50% 50%;
+    /* Exemplo: Foco central, bom para fotos onde o casal está no meio */
 }
 
 .carousel-slide .img-2 {
-    object-position: 50% 40%; /* Exemplo: Foco um pouco mais para cima */
+    object-position: 50% 40%;
+    /* Exemplo: Foco um pouco mais para cima */
 }
 
 .carousel-slide .img-3 {
-       object-position: 50% 52%; /* Exemplo: Foco um pouco mais para baixo */
+    object-position: 50% 52%;
+    /* Exemplo: Foco um pouco mais para baixo */
 }
 
 
@@ -134,20 +146,21 @@ header {
     width: 100%;
     padding: 20px;
     text-align: center;
-    /* REMOVIDO: background-color: rgba(0, 0, 0, 0.5); */ /* Fundo semi-transparente removido */
+    /* REMOVIDO: background-color: rgba(0, 0, 0, 0.5); */
+    /* Fundo semi-transparente removido */
     box-sizing: border-box;
 }
 
 .hero-content h1 {
     font-size: 3.8em;
     margin-bottom: 15px;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .hero-content p {
     font-size: 1.5em;
     margin-bottom: 30px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .btn-cta {
@@ -167,7 +180,7 @@ header {
 }
 
 /* Dots/indicadores */
-.hero > div:last-child {
+.hero>div:last-child {
     position: absolute;
     bottom: 20px;
     width: 100%;
@@ -187,7 +200,8 @@ header {
     border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
     background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -196,9 +210,15 @@ header {
     animation-name: fade;
     animation-duration: 1.5s;
 }
+
 @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 
@@ -230,7 +250,7 @@ header {
     max-width: 1200px;
     margin: 40px auto;
     background-color: #fff;
-    box-shadow: 0 0 15px rgba(0,0,0,0.08);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
     border-radius: 10px;
     text-align: center;
 }
@@ -284,13 +304,13 @@ header {
     overflow: hidden;
     text-align: center;
     padding-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gift-item:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .gift-item img {
@@ -326,7 +346,7 @@ header {
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.1s ease;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .buy-button:active {
@@ -334,10 +354,22 @@ header {
 }
 
 /* Cores específicas para botões de loja */
-.buy-button.amazon { background-color: #FF9900; }
-.buy-button.amazon:hover { background-color: #E68A00; }
-.buy-button.shopee { background-color: #EE4D2D; }
-.buy-button.shopee:hover { background-color: #D6452B; }
+.buy-button.amazon {
+    background-color: #FF9900;
+}
+
+.buy-button.amazon:hover {
+    background-color: #E68A00;
+}
+
+.buy-button.shopee {
+    background-color: #EE4D2D;
+}
+
+.buy-button.shopee:hover {
+    background-color: #D6452B;
+}
+
 /* Notei que você tinha Magalu, Americanas e Buscapé comentados. Se precisar deles, adicione de volta. */
 
 
@@ -378,7 +410,7 @@ header {
     padding: 30px;
     background-color: #fcfcfc;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: left;
 }
 
@@ -463,6 +495,18 @@ footer {
 
 /* Responsividade */
 @media (max-width: 900px) {
+    .countdown-timer {
+        font-size: 2em;
+        /* Reduz a fonte principal */
+        gap: 20px;
+        /* Reduz o espaçamento entre os itens */
+    }
+
+    .countdown-timer span {
+        font-size: 1.2em;
+        /* Reduz a fonte dos números */
+    }
+
     .navbar {
         flex-direction: column;
         padding: 15px;
@@ -494,79 +538,110 @@ footer {
     .section-content h2 {
         font-size: 2.2em;
     }
-    .prev, .next {
+
+    .prev,
+    .next {
         font-size: 30px;
         padding: 15px;
-        top: 30%; /* Ajuste para telas médias */
+        top: 30%;
+        /* Ajuste para telas médias */
     }
 }
 
 @media (max-width: 600px) {
-    .navbar {
-        padding: 10px;
-    }
-
-    .logo a {
+    .countdown-timer {
         font-size: 1.5em;
+        /* Reduz mais a fonte principal para celular */
+        gap: 15px;
+        /* Reduz o espaçamento para caber melhor */
+        flex-wrap: wrap;
+        /* Permite que os itens quebrem para a próxima linha se não couberem */
+        justify-content: center;
+        /* Centraliza os itens quando quebrarem */
     }
 
-    .nav-links a {
-        font-size: 0.9em;
+    .countdown-timer div {
+        /* Para garantir que cada item ocupe um espaço mais compacto se quebrar */
+        min-width: 80px;
+        /* Garante uma largura mínima para o conteúdo */
     }
 
-    .hero {
-        padding: 80px 15px;
-        height: 60vh;
-    }
-
-    .hero-content h1 {
-        font-size: 2em;
-    }
-
-    .hero-content p {
+    .countdown-timer span {
         font-size: 1em;
+        /* Reduz ainda mais a fonte dos números para celular */
     }
+}
 
-    .btn-cta {
-        padding: 12px 25px;
-        font-size: 1em;
-    }
+.navbar {
+    padding: 10px;
+}
 
-    .section-content {
-        padding: 30px 15px;
-        margin: 20px auto;
-    }
+.logo a {
+    font-size: 1.5em;
+}
 
-    .section-content h2 {
-        font-size: 1.8em;
-        margin-bottom: 25px;
-    }
+.nav-links a {
+    font-size: 0.9em;
+}
 
-    .about-container, .pix-info {
-        font-size: 1em;
-    }
+.hero {
+    padding: 80px 15px;
+    height: 60vh;
+}
 
-    .pix-key {
-        font-size: 1.1em;
-    }
+.hero-content h1 {
+    font-size: 2em;
+}
 
-    .gift-grid {
-        grid-template-columns: 1fr;
-    }
+.hero-content p {
+    font-size: 1em;
+}
 
-    .auth-form {
-        padding: 20px;
-    }
-    .prev, .next {
-        font-size: 25px;
-        padding: 10px;
-        top: 25%; /* Ajuste para telas pequenas */
-    }
-    .dot {
-        height: 12px;
-        width: 12px;
-    }
-    .hero-content {
-        padding: 15px;
-    }
+.btn-cta {
+    padding: 12px 25px;
+    font-size: 1em;
+}
+
+.section-content {
+    padding: 30px 15px;
+    margin: 20px auto;
+}
+
+.section-content h2 {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+}
+
+.about-container,
+.pix-info {
+    font-size: 1em;
+}
+
+.pix-key {
+    font-size: 1.1em;
+}
+
+.gift-grid {
+    grid-template-columns: 1fr;
+}
+
+.auth-form {
+    padding: 20px;
+}
+
+.prev,
+.next {
+    font-size: 25px;
+    padding: 10px;
+    top: 25%;
+    /* Ajuste para telas pequenas */
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+}
+
+.hero-content {
+    padding: 15px;
 }
