@@ -3,23 +3,22 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #FDFDFD;
+    /* ALTERADO: Branco muito suave */
+    color: #333333;
+    /* ALTERADO: Cinza queimado escuro para o texto padrão */
     line-height: 1.6;
     scroll-behavior: smooth;
-    /* Rolagem suave para as seções */
 }
 
 /* Header e Navegação */
 header {
     background-color: #333333;
-    /* Roxo escuro */
+    /* ALTERADO: Mantido cinza queimado escuro */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
-    /* Menu fixo no topo */
     top: 0;
     z-index: 1000;
-    /* Garante que fique acima de outros elementos */
 }
 
 .navbar {
@@ -33,18 +32,17 @@ header {
 
 .logo a {
     color: white;
+    /* Mantido branco para contraste com header */
     font-size: 0.2em;
+    /* Verifique se este font-size é intencional, 0.2em é muito pequeno */
     font-weight: bold;
     text-decoration: none;
 }
 
 .logo img {
     width: 50px;
-    /* Define a largura da imagem para 50 pixels */
     height: 50px;
-    /* Define a altura da imagem para 50 pixels */
     object-fit: contain;
-    /* Garante que a imagem inteira seja visível sem distorcer, mantendo suas proporções */
 }
 
 .nav-links {
@@ -60,6 +58,7 @@ header {
 
 .nav-links a {
     color: white;
+    /* Mantido branco para contraste com header */
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -67,14 +66,15 @@ header {
 }
 
 .nav-links a:hover {
-    color: #5a2a7a;
-    /* Amarelo dourado para hover */
+    color: #A0522D;
+    /* ALTERADO: Marrom Madeira Principal para hover */
 }
 
 /* --- Estilos para o Carrossel e Hero Section (REVISADO) --- */
 .hero {
     background: none;
     color: white;
+    /* Mantido branco para texto sobre imagem */
     text-align: center;
     padding: 0;
     height: 80vh;
@@ -114,29 +114,22 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Permite o "zoom" e corte para preencher */
     object-position: center;
-    /* Padrão centralizado, será sobrescrito por classes específicas */
     display: flex;
 }
 
 /* Classes específicas para ajuste de object-position por imagem */
-/* Verifique suas imagens e ajuste esses valores */
 .carousel-slide .img-1 {
     object-position: 50% 50%;
-    /* Exemplo: Foco central, bom para fotos onde o casal está no meio */
 }
 
 .carousel-slide .img-2 {
     object-position: 50% 40%;
-    /* Exemplo: Foco um pouco mais para cima */
 }
 
 .carousel-slide .img-3 {
     object-position: 50% 52%;
-    /* Exemplo: Foco um pouco mais para baixo */
 }
-
 
 .hero-content {
     position: absolute;
@@ -146,8 +139,6 @@ header {
     width: 100%;
     padding: 20px;
     text-align: center;
-    /* REMOVIDO: background-color: rgba(0, 0, 0, 0.5); */
-    /* Fundo semi-transparente removido */
     box-sizing: border-box;
 }
 
@@ -155,16 +146,19 @@ header {
     font-size: 3.8em;
     margin-bottom: 15px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    /* Mantido para legibilidade */
 }
 
 .hero-content p {
     font-size: 1.5em;
     margin-bottom: 30px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    /* Mantido para legibilidade */
 }
 
 .btn-cta {
-    background-color: #979797;
+    background-color: #A0522D;
+    /* ALTERADO: Marrom Madeira Principal */
     color: white;
     padding: 18px 35px;
     text-decoration: none;
@@ -176,7 +170,8 @@ header {
 }
 
 .btn-cta:hover {
-    background-color: #333333;
+    background-color: #6F4E37;
+    /* ALTERADO: Marrom Madeira Secundário para hover */
 }
 
 /* Dots/indicadores */
@@ -194,15 +189,18 @@ header {
     width: 18px;
     margin: 0 4px;
     background-color: rgba(255, 255, 255, 0.5);
+    /* Mantido branco semi-transparente para visibilidade */
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
     border: 1px solid rgba(255, 255, 255, 0.8);
+    /* Mantido branco semi-transparente */
 }
 
 .active,
 .dot:hover {
     background-color: rgba(255, 255, 255, 0.9);
+    /* Mantido branco quase opaco */
 }
 
 /* Animação de fade */
@@ -230,7 +228,8 @@ header {
     margin-top: 30px;
     font-size: 2.5em;
     font-weight: bold;
-    color: #333333;
+    color: #4A4A4A;
+    /* ALTERADO: Cinza queimado escuro */
 }
 
 .countdown-timer div {
@@ -241,22 +240,26 @@ header {
 .countdown-timer span {
     display: block;
     font-size: 1.5em;
-    color: #5a2a7a;
+    color: #A0522D;
+    /* ALTERADO: Marrom Madeira Principal */
 }
 
 /* Seções de Conteúdo Genéricas */
 .section-content {
     padding: 50px 20px;
+    width: 90%;
     max-width: 1200px;
     margin: 40px auto;
-    background-color: #fff;
+    background-color: #FFFFFF;
+    /* ALTERADO: Branco */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
     border-radius: 10px;
     text-align: center;
 }
 
 .section-content h2 {
-    color: #5a2a7a;
+    color: #333333;
+    /* ALTERADO: Cinza queimado escuro */
     font-size: 2.8em;
     margin-bottom: 40px;
     position: relative;
@@ -271,7 +274,8 @@ header {
     bottom: 0;
     width: 80px;
     height: 4px;
-    background-color: #333333;
+    background-color: #A0522D;
+    /* ALTERADO: Marrom Madeira Principal */
     border-radius: 2px;
 }
 
@@ -286,6 +290,8 @@ header {
 
 .about-container p {
     margin-bottom: 15px;
+    color: #444444;
+    /* NOVO: Cinza queimado para o texto do parágrafo */
 }
 
 /* Grid de Presentes (Mantido e ajustado) */
@@ -298,8 +304,10 @@ header {
 }
 
 .gift-item {
-    background-color: #f9f9f9;
-    border: 1px solid #eee;
+    background-color: #FFFFFF;
+    /* ALTERADO: Branco */
+    border: 1px solid #EEEEEE;
+    /* ALTERADO: Borda cinza muito clara */
     border-radius: 10px;
     overflow: hidden;
     text-align: center;
@@ -315,30 +323,35 @@ header {
 
 .gift-item img {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
+    height: 350px;
+    object-fit: contain;
     display: block;
     margin-bottom: 15px;
 }
 
 .gift-item h3 {
     color: #333333;
+    /* ALTERADO: Cinza queimado escuro */
     margin: 10px 0;
     font-size: 1.6em;
     padding: 0 15px;
 }
 
 .gift-item p {
-    color: #666;
+    color: #666666;
+    /* ALTERADO: Cinza queimado médio */
     font-size: 1em;
     margin-bottom: 20px;
     padding: 0 15px;
 }
 
 .buy-button {
-    display: block;
+    height: 45px;
+    display: flex;          
+    justify-content: center;
+    align-items: center;    
     width: calc(100% - 40px);
-    padding: 12px 15px;
+    padding: 0 15px;
     margin: 8px auto;
     text-decoration: none;
     color: white;
@@ -355,23 +368,24 @@ header {
 
 /* Cores específicas para botões de loja */
 .buy-button.amazon {
-    background-color: #FF9900;
+    background-color: #A0522D;
+    /* ALTERADO: Marrom Madeira Principal */
 }
 
 .buy-button.amazon:hover {
-    background-color: #E68A00;
+    background-color: #6F4E37;
+    /* ALTERADO: Marrom Madeira Secundário */
 }
 
 .buy-button.shopee {
-    background-color: #EE4D2D;
+    background-color: #8B4513;
+    /* ALTERADO: Outro tom de Marrom Madeira */
 }
 
 .buy-button.shopee:hover {
-    background-color: #D6452B;
+    background-color: #B45F06;
+    /* ALTERADO: Tom mais claro de Marrom Madeira para hover */
 }
-
-/* Notei que você tinha Magalu, Americanas e Buscapé comentados. Se precisar deles, adicione de volta. */
-
 
 /* PIX Section */
 .pix-info {
@@ -383,23 +397,29 @@ header {
 
 .pix-info p {
     margin-bottom: 15px;
+    color: #444444;
+    /* NOVO: Cinza queimado para o texto do parágrafo */
 }
 
 .pix-key {
-    background-color: #e0f7fa;
+    background-color: #EEEEEE;
+    /* ALTERADO: Cinza muito claro */
     padding: 15px;
-    border-left: 5px solid #26c6da;
+    border-left: 5px solid #A0522D;
+    /* ALTERADO: Borda marrom madeira */
     border-radius: 5px;
     font-size: 1.2em;
     font-weight: bold;
-    color: #00796b;
+    color: #333333;
+    /* ALTERADO: Cinza queimado escuro */
 }
 
 .qrcode-pix {
     max-width: 200px;
     height: auto;
     margin-top: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #DDDDDD;
+    /* ALTERADO: Borda cinza clara */
     border-radius: 5px;
 }
 
@@ -408,7 +428,8 @@ header {
     max-width: 500px;
     margin: 40px auto;
     padding: 30px;
-    background-color: #fcfcfc;
+    background-color: #FFFFFF;
+    /* ALTERADO: Branco */
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: left;
@@ -418,6 +439,7 @@ header {
     text-align: center;
     margin-bottom: 30px;
     color: #333333;
+    /* ALTERADO: Cinza queimado escuro */
 }
 
 .form-group {
@@ -428,7 +450,8 @@ header {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #444;
+    color: #444444;
+    /* ALTERADO: Cinza queimado */
 }
 
 .form-group input[type="text"],
@@ -436,23 +459,27 @@ header {
 .form-group input[type="password"] {
     width: calc(100% - 20px);
     padding: 12px 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #BBBBBB;
+    /* ALTERADO: Borda cinza médio */
     border-radius: 5px;
     font-size: 1em;
     transition: border-color 0.3s ease;
 }
 
 .form-group input:focus {
-    border-color: #4a1f6a;
+    border-color: #A0522D;
+    /* ALTERADO: Marrom Madeira Principal */
     outline: none;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px rgba(160, 82, 45, 0.5);
+    /* ALTERADO: Sombra marrom suave */
 }
 
 .btn-submit {
     display: block;
     width: 100%;
     padding: 15px;
-    background-color: #5a2a7a;
+    background-color: #8B4513;
+    /* ALTERADO: Marrom Madeira */
     color: white;
     border: none;
     border-radius: 5px;
@@ -464,7 +491,8 @@ header {
 }
 
 .btn-submit:hover {
-    background-color: #4a1f6a;
+    background-color: #6F4E37;
+    /* ALTERADO: Tom mais escuro de marrom no hover */
 }
 
 .form-link {
@@ -474,7 +502,8 @@ header {
 }
 
 .form-link a {
-    color: #4a1f6a;
+    color: #A0522D;
+    /* ALTERADO: Marrom Madeira Principal */
     text-decoration: none;
     font-weight: bold;
 }
@@ -487,7 +516,8 @@ header {
 footer {
     text-align: center;
     padding: 25px;
-    background-color: #333;
+    background-color: #333333;
+    /* ALTERADO: Mantido cinza queimado escuro */
     color: white;
     margin-top: 50px;
     font-size: 0.9em;
@@ -497,14 +527,11 @@ footer {
 @media (max-width: 900px) {
     .countdown-timer {
         font-size: 2em;
-        /* Reduz a fonte principal */
         gap: 20px;
-        /* Reduz o espaçamento entre os itens */
     }
 
     .countdown-timer span {
         font-size: 1.2em;
-        /* Reduz a fonte dos números */
     }
 
     .navbar {
@@ -538,110 +565,139 @@ footer {
     .section-content h2 {
         font-size: 2.2em;
     }
-
-    .prev,
-    .next {
+    /* .prev, .next {
         font-size: 30px;
         padding: 15px;
         top: 30%;
-        /* Ajuste para telas médias */
-    }
+    } */
 }
 
 @media (max-width: 600px) {
     .countdown-timer {
         font-size: 1.5em;
-        /* Reduz mais a fonte principal para celular */
         gap: 15px;
-        /* Reduz o espaçamento para caber melhor */
         flex-wrap: wrap;
-        /* Permite que os itens quebrem para a próxima linha se não couberem */
         justify-content: center;
-        /* Centraliza os itens quando quebrarem */
     }
 
     .countdown-timer div {
-        /* Para garantir que cada item ocupe um espaço mais compacto se quebrar */
         min-width: 80px;
-        /* Garante uma largura mínima para o conteúdo */
     }
 
     .countdown-timer span {
         font-size: 1em;
-        /* Reduz ainda mais a fonte dos números para celular */
     }
-}
 
-.navbar {
-    padding: 10px;
-}
+    .navbar {
+        padding: 6px;
+    }
 
-.logo a {
-    font-size: 1.5em;
-}
+    .logo a {
+        font-size: 1.5em;
+    }
 
-.nav-links a {
-    font-size: 0.9em;
-}
+    .nav-links a {
+        font-size: 0.9em;
+    }
 
-.hero {
-    padding: 80px 15px;
-    height: 60vh;
-}
+    .hero {
+        padding: 80px 15px;
+        height: 60vh;
+    }
 
-.hero-content h1 {
-    font-size: 2em;
-}
+    .hero-content h1 {
+        font-size: 2em;
+    }
 
-.hero-content p {
-    font-size: 1em;
-}
+    .hero-content p {
+        font-size: 1em;
+    }
 
-.btn-cta {
-    padding: 12px 25px;
-    font-size: 1em;
-}
+    .btn-cta {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
 
-.section-content {
-    padding: 30px 15px;
-    margin: 20px auto;
-}
+    .section-content h2 {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
 
-.section-content h2 {
-    font-size: 1.8em;
-    margin-bottom: 25px;
-}
+    .about-container,
+    .pix-info {
+        font-size: 1em;
+    }
 
-.about-container,
-.pix-info {
-    font-size: 1em;
-}
+    .pix-key {
+        font-size: 1.1em;
+    }
 
-.pix-key {
-    font-size: 1.1em;
-}
+    /* Ajustes para o GRID de produtos em mobile (agora funcionais) */
+    .gift-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        /* Mantido o que funcionou */
+        gap: 10px;
+        /* Mantido o que funcionou */
+    }
 
-.gift-grid {
-    grid-template-columns: 1fr;
-}
+    .auth-form {
+        padding: 20px;
+    }
 
-.auth-form {
-    padding: 20px;
-}
+    /* .prev, .next estão removidos do HTML, mas deixo os estilos comentados caso reative */
+    /* .prev, .next {
+        font-size: 25px;
+        padding: 10px;
+        top: 25%;
+    } */
 
-.prev,
-.next {
-    font-size: 25px;
-    padding: 10px;
-    top: 25%;
-    /* Ajuste para telas pequenas */
-}
+    .dot {
+        height: 12px;
+        width: 12px;
+    }
 
-.dot {
-    height: 12px;
-    width: 12px;
-}
+    .hero-content {
+        padding: 15px;
+    }
 
-.hero-content {
-    padding: 15px;
+    /* Ajustes para cada ITEM do produto para torná-lo mais compacto (mantido o que funcionou) */
+    .gift-item {
+        padding-bottom: 10px;
+    }
+
+    .gift-item img {
+        height: 180px;
+        margin-bottom: 5px;
+    }
+
+    .gift-item h3 {
+        font-size: 1.3em;
+        margin: 5px 0;
+        padding: 0 5px;
+    }
+
+    .gift-item p {
+        font-size: 0.8em;
+        margin-bottom: 10px;
+        padding: 0 5px;
+    }
+
+    .buy-button {
+        /* Garante que o flexbox esteja ativo também na responsividade, caso algo o sobrescreva */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: calc(100% - 20px);
+        padding: 8px 10px;
+        font-size: 0.9em;
+        margin: 5px auto;
+    }
+
+    /* O padding do section-content foi movido para o início deste media query para evitar duplicação */
+    .section-content {
+        padding: 30px 10px;
+        /* Reduz padding lateral para 10px, antes era 5px */
+        margin: 20px auto;
+    }
 }
